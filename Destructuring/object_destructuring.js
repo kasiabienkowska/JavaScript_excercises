@@ -1,13 +1,13 @@
-const book = {
+// const book = {
     // author:'John Doe',
     // title:'A book',
-    price:126,
+    // price:126,
     // chapters:{
     //     first: 'Beginning',
     //     second:'of Something',
     //     third: 'New',
     // }
-};
+// };
 // const author=book.author; // kopie wartosci
 // const price=book.price; // kopie wartosci
 // const chapters=book.chapters; // kopie referencji!
@@ -16,20 +16,20 @@ const book = {
 // price++;
 // chapters.first = 'Nowy rozdział';
 
-const {
-    author: personName = 'Kasia',
-    price=0,
-    chapters= {
-        first: 'Default-title'
-    } 
-} = book;
+// const {
+//     author: personName = 'Kasia',
+//     price=0,
+//     chapters= {
+//         first: 'Default-title'
+//     } 
+// } = book;
 
-const { length} =personName;
+// const { length} =personName;
 
-const showTitle=({title})=>console.log(title);
+// const showTitle=({title})=>console.log(title);
 
 
-showTitle(book);
+// showTitle(book);
 
 // console.log(book.author);
 // console.log(personName);
@@ -40,6 +40,51 @@ showTitle(book);
 // console.log(chapters);
 // console.log(first);
 
+//Przykład 2
+
+// const obj = {
+//     first_name : "Karol",
+//     last_name : "Kowalski",
+//     age : 10
+// }
+
+// const {
+//     first_name,
+//     last_name,
+//     age
+// } = obj;
+
+// console.log(first_name);
+
+// const obj = {
+//     first_name : "Karol",
+//     last_name : "Kowalski"
+// }
+
+// const {
+//     first_name = "brak",
+//     last_name = "brak",
+//     favoritePet = "brak"
+// } = obj;
+
+// console.log(first_name); //Karol
+// console.log(last_name); //Kowalski
+// console.log(favoritePet); //"brak"
+
+const obj = {
+    first_name : "Karol",
+    last_name : "Kowalski",
+}
+
+const {
+    first_name : name = "brak",
+    last_name : surname = "brak",
+    favoritePet : pet  = "brak"
+} = obj;
+
+console.log(name); //Karol
+console.log(surname); //Kowalski
+console.log(pet); //"brak"
 
 
 
